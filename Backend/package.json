@@ -1,0 +1,27 @@
+{
+  "name": "proyecto_arquitectura_software",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Franklin1203/Proyecto_Arquitectura_Software.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Franklin1203/Proyecto_Arquitectura_Software/issues"
+  },
+  "homepage": "https://github.com/Franklin1203/Proyecto_Arquitectura_Software#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mongoose": "^9.11.2",
+    "mssql": "^12.7.5"
+  }
+}
