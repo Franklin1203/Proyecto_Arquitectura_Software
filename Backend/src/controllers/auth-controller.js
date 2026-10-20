@@ -4,7 +4,7 @@ import { pool } from "../config/sqlserver.js"
 
 export async function registro(req, res, next) {
 
-    try {
+  
 
         const { nombre, email, clave } = req.body;
         if (!nombre || !email || !clave) {
@@ -22,17 +22,13 @@ export async function registro(req, res, next) {
         res.status(201).json(result.recordset[0])
 
 
-    } catch (err) {
-        next(err)
-    }
-
+  
 
 }
 
 
 export async function login(req, res, next) {
 
-    try {
         const { email, clave } = req.body
         if (!email || !clave) {
             return res.status(400).json({ Error: "Por favor, complete todos los campos" })
@@ -56,9 +52,7 @@ export async function login(req, res, next) {
         const token = jwt.sign({ id, nombre }, process.env.JWT_SECRET, { expiresIn: "2h" })
         res.json({ token, nombre })
 
-    } catch (err) {
-        next(err)
-    }
+ 
 
 
 }

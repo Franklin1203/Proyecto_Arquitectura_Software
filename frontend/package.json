@@ -10,11 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.104.3",
+    "@tanstack/react-query": "^5.104.4",
     "bcryptjs": "^3.0.3",
     "jsonwebtoken": "^9.0.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4",
     "router-dom": "^3.3.8"
   },
   "devDependencies": {
