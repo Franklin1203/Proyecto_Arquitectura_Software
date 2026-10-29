@@ -1,4 +1,6 @@
 
+
+//adaptador de entrada para menejar peticiones http
 export class ProductoControlador {
 
     constructor(productoServicio) {

@@ -8,7 +8,7 @@ app.get('/productos', async (req, res) => {
   res.json(r.recordset);
 });
 
-
+//para que reste el stock cuando se haga el pedido
 async function reservarStock(pedido) {
   const r = await pool.request()
     .input('id', pedido.productoId)

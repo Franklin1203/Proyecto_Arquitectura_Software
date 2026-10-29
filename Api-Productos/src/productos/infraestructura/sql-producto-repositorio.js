@@ -1,6 +1,8 @@
 import { pool } from '../../config/sqlserver.js';
 import { ProductoRepositorio } from '../dominio/producto-repositorio.js';
 
+
+//adaptador de salida para controlar peticiones a la base de datos
 export class SqlProductoRepositorio extends ProductoRepositorio {
 
 

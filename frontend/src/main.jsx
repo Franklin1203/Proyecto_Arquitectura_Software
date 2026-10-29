@@ -9,9 +9,9 @@ import App from './App.jsx'
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-      <QueryClientProvider client={queryClient}>
-          <BrowserRouter>
+  <StrictMode> {/* para asegurar que todo se renderize correctamente */}
+      <QueryClientProvider client={queryClient}> {/* controla cache de los datos */}
+          <BrowserRouter> {/* para el ruteo de las paginas */}
                 <App />
           </BrowserRouter>
       </QueryClientProvider>

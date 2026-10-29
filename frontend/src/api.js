@@ -1,16 +1,19 @@
 const API = 'http://localhost:3005/api';
 
+//conexion de api al frontend
 
-export async function api(ruta,opciones={}){
+export async function api(ruta,opciones={}){ 
 
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('token'); //obtenemos el token
+    
 
-    const res = await fetch(API + ruta,{
+    //para construir la direccion http
+    const res = await fetch(API + ruta,{ 
 
-        method:opciones.method || 'GET',
+        method:opciones.method || 'GET', 
         headers:{
             'Content-Type':'application/json',
-            ...(token&&{Authorization:`Bearer ${token}`})
+            ...(token&&{Authorization:`Bearer ${token}`}) 
         },
         body:JSON.stringify(opciones.body)
     });

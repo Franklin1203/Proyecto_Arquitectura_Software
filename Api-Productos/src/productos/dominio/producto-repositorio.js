@@ -1,6 +1,6 @@
 
+//puerto de salida con funcionalidades del modulo
 export class ProductoRepositorio {
-
 
     async obtenerProductos() {
         throw new Error("Metodo 'obtenerProductos' no implementado")

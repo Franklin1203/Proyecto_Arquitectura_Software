@@ -2,7 +2,10 @@
 import jwt from "jsonwebtoken";
 
 export function verificarToken(req,res,next){
-    const header = req.headers.authorization ?? '';
+    //si no está el header, entonces asignar espacio vacío
+    const header = req.headers.authorization ?? ''; 
+
+    //tomamos el token
     const token = header.startsWith('Bearer ') ? header.slice(7) :null
 
     if(!token){
@@ -11,6 +14,7 @@ export function verificarToken(req,res,next){
 
 
     try{
+        //verifica que el token sea válido
         req.usuario = jwt.verify(token,process.env.JWT_SECRET);
         next()
     }catch{

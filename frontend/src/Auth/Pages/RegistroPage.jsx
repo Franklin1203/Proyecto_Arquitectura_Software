@@ -1,13 +1,14 @@
 import { useAuth } from "../Hooks/useAuth";
 import RegistroForm from "../Componentes/RegistroForm";
 
+//parte del view, pagina de registro
 export default function RegistroPage(){
     const {formulario,estado,acciones} = useAuth();
 
     return(
         <main className="auth-pag">
-            <div className="tarjeta-registro">
-                <h1>Tienda Ultra Tech</h1>
+            <div className="contenedor-form">
+                
                 <RegistroForm
                     formulario={formulario}
                     estado={estado}

@@ -1,3 +1,5 @@
+
+//para que el sistema no colapse al subir
 export async function reintentar(nombre,fn,intentos=15){
 
     for(let i=1;i<=intentos;i++){

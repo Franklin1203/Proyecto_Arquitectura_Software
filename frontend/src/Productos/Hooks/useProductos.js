@@ -10,18 +10,19 @@ import {
 
 } from "../Servicios/apiProductos.js"
 
-
+//viewModel de productos
 export function useProductos() {
 
     const [nombre, setNombre] = useState("");
     const [precio, setPrecio] = useState("");
     const [stock, setStock] = useState("");
 
-    const [idEditando, setIdEditando] = useState(null)
+    const [idEditando, setIdEditando] = useState(null) //para controlar que producto se esta editando
 
 
     const queryClient = useQueryClient();
 
+    //usamos useQuery para el get de los productos
     const consultar = useQuery({
         queryKey: ['productos'],
         queryFn: obtenerProductos
@@ -38,7 +39,7 @@ export function useProductos() {
     const crear = useMutation({
         mutationFn: crearProducto,
         onSuccess: () => {
-            queryClient.invalidateQueries({ queryKey: ['productos'] });
+            queryClient.invalidateQueries({ queryKey: ['productos'] }); //actualiza la cache de los productos
             limpiarFormulario();
         }
 
@@ -90,6 +91,8 @@ export function useProductos() {
             showCancelButton: true,
             confirmButtonText: 'Si, estoy seguro',
             cancelButtonText: 'Cancelar',
+            confirmButtonColor: '#FF1600', 
+            cancelButtonColor: '#757575'
 
         }).then((result) => {
             if (result.isConfirmed) {
@@ -111,6 +114,8 @@ export function useProductos() {
             showCancelButton: true,
             confirmButtonText: 'Si, estoy seguro',
             cancelButtonText: 'Cancelar',
+            confirmButtonColor: '#FF1600', 
+            cancelButtonColor: '#757575'
 
         }).then((result) => {
             if (result.isConfirmed) {

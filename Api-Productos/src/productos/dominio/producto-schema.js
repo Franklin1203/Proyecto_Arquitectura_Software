@@ -1,3 +1,5 @@
+
+//modelo con reglas de negocio
 export class Producto{
 
     constructor({id=null,nombre,precio,stock=0,creado_en=null}){
@@ -15,8 +17,8 @@ export class Producto{
             throw new Error('Precio invalido')
         }
 
-        if(stock < 0){
-            throw new Error('El stock no puede ser negativo')
+        if(stock <= 0){
+            throw new Error('Stock debe ser mínimo 1')
         }
            
         

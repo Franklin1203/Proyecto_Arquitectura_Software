@@ -1,6 +1,9 @@
 
 import { Producto } from "../dominio/producto-schema.js";
 
+
+//casos de uso implementados
+
 export class ProductoServicio{
 
     constructor(productoRepositorio){

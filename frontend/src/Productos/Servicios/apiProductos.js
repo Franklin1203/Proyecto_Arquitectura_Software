@@ -1,6 +1,6 @@
 import { api } from "../../api.js";
 
-
+//model con todas las funciones de la api
 export const obtenerProductos = ()=> api('/productos');
 export const obtenerProductoPorId= (id)=>api(`/productos/${id}`)
 export const crearProducto = (datos) => api('/productos',{method: 'POST',body:datos});

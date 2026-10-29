@@ -2,24 +2,27 @@
 import { useAuth } from "../Hooks/useAuth";
 import LoginForm from "../Componentes/LoginForm";
 
-export default function LoginPage(){
-    const {formulario,estado,acciones} = useAuth();
+//parte del view, pagina de login
+export default function LoginPage() {
+    const { formulario, estado, acciones } = useAuth(); // llamamos todos los datos del viewModel
 
-    return(
+    return (
         <main className="auth-pag">
-            <div className="tarjeta-login">
-                <h1>Tienda Ultra Tech</h1>
-                <p>Bienvenido, ingresa tus credenciales</p>
+
+            <div className="contenedor-form">
 
                 <LoginForm
                     formulario={formulario}
                     estado={estado}
                     acciones={acciones}
                 />
-                <div>
-                    <p>¿No tienes cuenta?<a href="/registro">Regístrate aquí</a></p>
-                </div>
+                <p className="registro-link">¿No tienes cuenta? <a href="/registro">Regístrate aquí</a></p>
+                
+
             </div>
+
+
+
 
         </main>
     )

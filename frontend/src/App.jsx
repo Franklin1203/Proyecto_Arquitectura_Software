@@ -3,6 +3,7 @@ import LoginPage from "./Auth/Pages/LoginPage.jsx"
 import RegistroPage from "./Auth/Pages/RegistroPage.jsx";
 import ProductosPage from "./Productos/Pages/ProductosPage.jsx"
 import RutasProtegidas from "./RutasProtegidas.jsx"
+import './App.css'
 
 
 
@@ -16,7 +17,7 @@ export default function App() {
             <Route path="/" element={
 
                 <RutasProtegidas>
-                    <ProductosPage />
+                    <ProductosPage /> {/*asegura que solo personas autenticadas tengan acceso a la pag de productos */}
                 </RutasProtegidas>
 
             } />

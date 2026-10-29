@@ -9,7 +9,7 @@ export async function obtenerResenas(req,res){
         filtro.productoId = Number(req.query.productoId)
     }
 
-    const resenas = await Resena.find(filtro).sort({createdAt:-1});
+    const resenas = await Resena.find(filtro).sort({createdAt:-1}); //filtramos resenas por orden de creado en forma descendente
     res.json(resenas)
 
 }
