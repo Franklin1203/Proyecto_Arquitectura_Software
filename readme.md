@@ -54,8 +54,7 @@ Abre una nueva terminal en la carpeta del frontend:
 npm install
 npm run dev
 
-
-```
+````
 
 ## Explicación de arquitectura hexagonal
 
